@@ -28,3 +28,19 @@ HyperNEATSimulation <- function(simulationParameters = NULL,
 
   return(simulation)
 }
+
+
+runSingleGeneration <- function(simulation){
+  simulation$generation <- simulation$generation %>% map(calculateFitness)
+
+
+}
+
+calculateFitness <- function(genome){
+  network <- generateNetwork(genome$gene)
+  return(genome)
+}
+
+generateNetwork <- function(genome){
+  return(genome)
+}
