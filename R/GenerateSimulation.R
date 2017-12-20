@@ -4,6 +4,9 @@
 #' @param numGenomes Number of genomes
 #' @param numInputs  Number of inputs
 #' @param numOutputs Number of outputs
+#' @value Returns a list of length \code{numGenomes} of individual genomes with all input nodes
+#' connected to all output nodes. Weights are initialised with runif(n=1,min=0,max=1)
+#' and activation functions are rectified linear units.
 #' @export
 generateInitialGeneration <- function(numGenomes, numInputs, numOutputs){
   if(numInputs  < 1) stop( "numInputs needs to be positive integer")
@@ -27,7 +30,7 @@ generateInitialGenome <- function(numInputs, numOutputs){
   }
   genome$fitness <- 0
   genome$globalRank <- 0
-  genome$adjustedFitness
+  genome$adjustedFitness <- 0
   class(genome) <- "genome"
   return(genome)
 }
