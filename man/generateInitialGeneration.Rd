@@ -7,16 +7,11 @@
 generateInitialGeneration(numGenomes, numInputs, numOutputs)
 }
 \arguments{
-\item{numGenomes}{Number of individual genomes}
+\item{numGenomes}{Number of genomes}
 
 \item{numInputs}{Number of inputs}
 
 \item{numOutputs}{Number of outputs}
-}
-\value{
-Returns a list of length \code{numGenomes} of individual genomes with all input nodes connected to all
-output nodes. Weights are initialised with runif(n=1,min=0,max=1) and activation functions are rectified
-linear units.
 }
 \description{
 This function creates initial pool of genomes.

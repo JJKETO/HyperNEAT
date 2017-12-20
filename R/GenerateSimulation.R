@@ -48,3 +48,5 @@ generateInitialGene <- function(startNode, endNode, index){
   class(gene) <- "gene"
   return(gene)
 }
+
+
