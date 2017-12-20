@@ -32,7 +32,7 @@ HyperNEATSimulation <- function(simulationParameters = NULL,
 
 runSingleGeneration <- function(simulation){
   simulation$generation <- simulation$generation %>% map(calculateFitness)
-
+  simulation$generation <- rankGeneration(simulation$generation)
 
 }
 
@@ -43,4 +43,8 @@ calculateFitness <- function(genome){
 
 generateNetwork <- function(genome){
   return(genome)
+}
+
+rankGeneration <- function(generation){
+  return(generation)
 }
